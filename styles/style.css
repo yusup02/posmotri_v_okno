@@ -10,6 +10,7 @@ html {
 
 .page {
   inline-size: 1200px;
+  display: flex;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -55,12 +56,10 @@ input:focus-visible {
   outline-color: #ffffff;
 }
 
-
 .content {
   display: flex;
   width: 1140px;
-  height: 534px;
-  margin: 133px auto;
+  margin: auto;
 }
 
 .content__details {
@@ -319,9 +318,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   content: " ";
   display: inline-block;
-  position: absolute;
-  right: 1px;
-  top: 1px;
+  margin-bottom: 1px;
   width: 15px;
   height: 15px;
   background-color: #fff;
