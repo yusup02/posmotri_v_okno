@@ -60,8 +60,7 @@ input:focus-visible {
   display: flex;
   width: 1140px;
   height: 534px;
-  margin: 0 auto;
-  margin-top: 133px;
+  margin: 133px auto;
 }
 
 .content__details {
