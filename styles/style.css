@@ -48,14 +48,6 @@ a:focus-visible {
   border: 0;
 }
 
-input:focus {
-  outline: none;
-}
-
-input:focus-visible {
-  outline-color: #ffffff;
-}
-
 .content {
   display: flex;
   width: 1140px;
@@ -199,10 +191,6 @@ input:focus-visible {
   outline: 1px solid #fff;
 }
 
-input:focus-visible {
-  outline: none;
-}
-
 /* конпка найти */
 .button {
   width: 194px;
@@ -250,6 +238,10 @@ button:focus {
   font-weight: 700;
   line-height: 94%; /* 70.5px */
   text-transform: uppercase;
+}
+
+.button:hover {
+  text-decoration: underline;
 }
 
 .title {
@@ -316,7 +308,7 @@ a:focus-visible {
   height: 399px;
 }
 
-input[type="checkbox"] {
+.search-form__checkbox[type="checkbox"] {
   clip-path: inset(50%);
 }
 
@@ -335,21 +327,19 @@ input[type="checkbox"] {
   margin-right: -15px;
 }
 
-input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+.search-form__checkbox[type="checkbox"]:checked
+  + .search-form__pseudo-checkbox {
   background-color: #323232;
 }
 
-input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox[type="checkbox"]:checked
+  + .search-form__pseudo-checkbox::before {
   content: " ";
   display: inline-block;
   margin-bottom: 1px;
   width: 15px;
   height: 15px;
   background-color: #fff;
-}
-
-input[type="radio"] {
-  display: none;
 }
 
 .search-form__label {
@@ -369,22 +359,22 @@ input[type="radio"] {
   text-decoration: underline;
 }
 
-.button:hover {
-  text-decoration: underline;
-}
-
-label input[type="checkbox"] ~ .search-form__checkbox::before {
-  display: none;
-}
-
-input:focus {
+.search-form__label:focus {
   outline: none;
 }
 
-input:active {
-  display: none;
+.search-form__label:hover {
+  padding-left: 7px;
+}
+
+.search-form__textfield:hover {
+  margin-left: -7px;
 }
 
 .search-form__label:focus-within {
-  border: 1px solid #ffffff; /* Цвет и толщина рамки при фокусе */
+  outline: 1px solid #fff;
+}
+
+.search-form__checkbox:hover {
+  display: none;
 }
