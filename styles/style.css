@@ -14,7 +14,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -72,7 +72,7 @@ input:focus-visible {
   height: 304px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 30px;
   margin-top: 18px;
   position: relative;
 }
@@ -85,6 +85,11 @@ input:focus-visible {
 
 .content__list-item img {
   width: 194px;
+}
+
+.content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: 0 0;
 }
 
 .content__video-card {
@@ -101,18 +106,20 @@ input:focus-visible {
   height: 389px;
 }
 
-.result__video-container video {
+.result__video {
+  object-fit: cover;
+  object-position: 0 0;
   width: 100%;
 }
 
 .content__video-card-title {
-  color: #FFF;
-font-family: Oswald;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%; /* 30px */
-text-transform: uppercase;
+  color: #fff;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
 }
 
 .search-form {
@@ -126,7 +133,7 @@ text-transform: uppercase;
 }
 
 .search-form__fieldset {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans, Arial, sans-serif Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -136,7 +143,7 @@ text-transform: uppercase;
 
 /* Город */
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans, Arial, sans-serif Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -144,7 +151,7 @@ text-transform: uppercase;
 }
 
 .search-form__label {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans, Arial, sans-serif Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -154,7 +161,6 @@ text-transform: uppercase;
 .search-form__fieldset-title {
   padding-bottom: 4px;
 }
-
 
 .search-form__checkbox-list {
   padding-bottom: 4px;
@@ -176,7 +182,7 @@ text-transform: uppercase;
 
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans, Arial, sans-serif Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -205,16 +211,22 @@ input:focus-visible {
   background-color: #1b1919;
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans, Arial, sans-serif Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
+button:focus {
+  outline: none;
+}
+
 .more-button {
-  width: 399px;
+  width: 395px;
   margin-top: 14px;
+  margin-bottom: 2px;
+  margin-left: 2px;
 }
 
 .search-form__checkbox:default {
@@ -222,12 +234,17 @@ input:focus-visible {
 }
 
 .content__video-card-description-container {
+  padding-top: 6px;
   width: 200px;
+}
+
+.content__video-card-description {
+  padding-top: 6px;
 }
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -237,7 +254,7 @@ input:focus-visible {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -266,17 +283,27 @@ input:focus-visible {
   cursor: pointer;
 }
 
-.content__video-card:active {
-  background: #545050;
+.content__card-link:active {
+  background-color: #545050;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
 .content__list-item {
   width: 394px;
   height: 109px;
+}
+
+.content__card-link {
+  display: block !important;
+}
+
+.content__card-link_current {
+  width: 394px;
+  height: 109px;
+  background-color: #545050 !important;
 }
 
 a:focus-visible {
@@ -287,8 +314,6 @@ a:focus-visible {
 .error {
   width: 711px;
   height: 399px;
-  margin-top: 208px;
-  margin-left: 30px;
 }
 
 input[type="checkbox"] {
@@ -304,7 +329,6 @@ input[type="checkbox"] {
   position: relative;
   top: 3px;
   right: 5px;
- 
 }
 
 .visually-hidden {
@@ -330,7 +354,7 @@ input[type="radio"] {
 
 .search-form__label {
   text-align: center;
-gap: 15px;
+  gap: 15px;
 }
 
 .search-form__label:hover {
@@ -350,15 +374,17 @@ gap: 15px;
 }
 
 label input[type="checkbox"] ~ .search-form__checkbox::before {
-display: none;
+  display: none;
 }
-
 
 input:focus {
   outline: none;
 }
 
+input:active {
+  display: none;
+}
+
 .search-form__label:focus-within {
   border: 1px solid #ffffff; /* Цвет и толщина рамки при фокусе */
- 
 }
