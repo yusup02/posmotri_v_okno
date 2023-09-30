@@ -59,7 +59,6 @@ a:focus-visible {
   padding-left: 30px;
 }
 
-
 .title {
   color: #fff;
   font-family: Oswald, Arial, sans-serif;
@@ -79,7 +78,6 @@ a:focus-visible {
   line-height: 94%; /* 70.5px */
   text-transform: uppercase;
 }
-
 
 .content__list {
   overflow: auto;
@@ -122,7 +120,6 @@ a:focus-visible {
 .content__video-card-description {
   padding-top: 6px;
 }
-
 
 .content__video-card-thumbnail {
   object-fit: cover;
@@ -226,13 +223,10 @@ a:focus-visible {
   outline: none !important;
 }
 
-
-
- /* .search-form__textfield:focus-visible {
+/* .search-form__textfield:focus-visible {
   outline: 1px solid #fff !important;
   outline-offset: 2px;
 } */
-
 
 .search-form__textfield:active {
   outline-offset: none;
@@ -271,8 +265,6 @@ button:focus {
   text-decoration: underline;
 }
 
-
-
 .button:active {
   background: #545050;
 }
@@ -293,7 +285,6 @@ button:focus {
 .content__card-link:hover {
   text-decoration: underline;
 }
-
 
 .content__card-link {
   display: block !important;
@@ -382,7 +373,6 @@ a:focus-visible {
 .search-form__checkbox:hover {
   display: none;
 }
-
 
 .search-form__textfield {
   appearance: none;
