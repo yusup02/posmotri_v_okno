@@ -190,6 +190,8 @@ a:focus-visible {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center;
+  gap: 15px;
 }
 
 .search-form__checkbox-list {
@@ -197,6 +199,10 @@ a:focus-visible {
 }
 
 /* Инпут поле ввода */
+
+.search-form__textfield:hover {
+  margin-left: -7px;
+}
 .search-form__textfield {
   margin-top: 5px;
   border-top: 1px solid #fff;
@@ -208,6 +214,7 @@ a:focus-visible {
   width: 225px;
   height: 27px;
   align-items: center;
+  appearance: none;
 }
 
 .search-form__textfield::placeholder {
@@ -222,11 +229,6 @@ a:focus-visible {
 .search-form__textfield:focus {
   outline: none !important;
 }
-
-/* .search-form__textfield:focus-visible {
-  outline: 1px solid #fff !important;
-  outline-offset: 2px;
-} */
 
 .search-form__textfield:active {
   outline-offset: none;
@@ -278,6 +280,10 @@ button:focus {
   cursor: pointer;
 }
 
+.search-form__checkbox:hover {
+  display: none;
+}
+
 .content__card-link:active {
   background-color: #545050;
 }
@@ -292,18 +298,12 @@ button:focus {
 
 .content__card-link_current {
   width: 394px;
-  height: 109px;
-  background-color: #545050 !important;
+  background-color: #545050;
 }
 
 a:focus-visible {
   outline-offset: 1px;
   outline: 1px solid 1 #fff;
-}
-
-.error {
-  width: 711px;
-  height: 399px;
 }
 
 .search-form__checkbox[type="checkbox"] {
@@ -340,11 +340,6 @@ a:focus-visible {
   background-color: #fff;
 }
 
-.search-form__label {
-  text-align: center;
-  gap: 15px;
-}
-
 .search-form__label-text:hover {
   text-decoration: underline;
 }
@@ -366,14 +361,7 @@ a:focus-visible {
   margin-right: 0;
 }
 
-.search-form__textfield:hover {
-  margin-left: -7px;
-}
-
-.search-form__checkbox:hover {
-  display: none;
-}
-
 .search-form__textfield {
   appearance: none;
 }
+
